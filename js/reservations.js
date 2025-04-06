@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Guest number functionality - show large group form for 12+ people
+    // Guest number functionality - only show large group form for more than 12 people
     const guestSelect = document.getElementById('guests');
     
     if (guestSelect) {
         guestSelect.addEventListener('change', function() {
             const guestCount = parseInt(this.value);
             
-            if (guestCount >= 12) {
+            if (guestCount > 12) {
                 // Switch to large group tab
                 reservationTabs.forEach(t => {
                     if (t.getAttribute('data-tab') === 'large-group') {
@@ -46,40 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         option.addEventListener('click', () => {
             packageOptions.forEach(o => o.classList.remove('selected'));
             option.classList.add('selected');
-            
-            // If Game & Dine package is selected, show food preselection
-            const packageType = option.getAttribute('data-package');
-            const foodPreselection = document.querySelector('.food-preselection');
-            
-            if (foodPreselection) {
-                if (packageType === 'game-dine') {
-                    foodPreselection.style.display = 'block';
-                } else {
-                    foodPreselection.style.display = 'none';
-                }
-            }
-        });
-    });
-    
-    // Food tabs
-    const foodTabs = document.querySelectorAll('.food-tab');
-    const foodContents = document.querySelectorAll('.food-content');
-    
-    foodTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const tabTarget = tab.getAttribute('data-tab');
-            
-            // Update active tab
-            foodTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            
-            // Update active content
-            foodContents.forEach(content => {
-                content.classList.remove('active');
-                if (content.id === tabTarget + '-content') {
-                    content.classList.add('active');
-                }
-            });
         });
     });
     
@@ -94,22 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 birthdayOptions.style.display = 'none';
             }
-        });
-    }
-    
-    // Large group food preselection
-    const foodPreselect = document.querySelectorAll('input[name="food-preselect"]');
-    const largeGroupFood = document.querySelector('.large-group-food');
-    
-    if (foodPreselect.length && largeGroupFood) {
-        foodPreselect.forEach(radio => {
-            radio.addEventListener('change', function() {
-                if (this.value === 'yes') {
-                    largeGroupFood.style.display = 'block';
-                } else {
-                    largeGroupFood.style.display = 'none';
-                }
-            });
         });
     }
     

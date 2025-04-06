@@ -52,14 +52,16 @@
 }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
   color: var(--text-dark);
   background-color: var(--white);
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
   color: var(--navy-blue);
   margin-bottom: var(--spacing-md);
 }

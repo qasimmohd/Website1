@@ -1,0 +1,45 @@
+/* Static hanging vines styles */
+.hanging-vines-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hanging-vine {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  pointer-events: none;
+}
+
+.vine-1 {
+  background-image: url('../images/vines/hanging-vine.svg');
+}
+
+.vine-2 {
+  background-image: url('../images/vines/hanging-vine2.svg');
+}
+
+.vine-3 {
+  background-image: url('../images/vines/hanging-vine3.svg');
+}
+
+/* Remove floating animation */
+.floating-element {
+  position: absolute;
+  z-index: 1;
+  /* Animation removed as requested */
+}
+
+/* Remove animation keyframes */
+@keyframes float {
+  0%, 100% { transform: none; }
+  50% { transform: none; }
+}

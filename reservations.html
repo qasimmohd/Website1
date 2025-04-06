@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/decorative-elements.css">
     <link rel="stylesheet" href="css/cafe-details.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/static-vines.css">
+    <link rel="stylesheet" href="css/header-background.css">
+    <link rel="stylesheet" href="css/clean-design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="js/reservations.js" defer></script>
 </head>
 <body>
     <!-- Header -->
     <header class="header paneled-wall">
+        <div class="hanging-vines-container">
+            <div class="hanging-vine vine-1" style="left: 5%;"></div>
+            <div class="hanging-vine vine-2" style="left: 25%;"></div>
+            <div class="hanging-vine vine-3" style="left: 45%;"></div>
+            <div class="hanging-vine vine-1" style="left: 65%;"></div>
+            <div class="hanging-vine vine-2" style="left: 85%;"></div>
+        </div>
         <div class="container header-content">
             <a href="index.html">
                 <img src="images/dna_logo_no_bg.png" alt="DNA Board Game Cafe" class="logo">
@@ -24,7 +34,6 @@
                     <li class="nav-item"><a href="games.html" class="nav-link">Games</a></li>
                     <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
                     <li class="nav-item"><a href="reservations.html" class="nav-link active">Reservations</a></li>
-                    <li class="nav-item"><a href="index.html#rates" class="nav-link">Gaming Rates</a></li>
                 </ul>
             </nav>
         </div>
@@ -130,153 +139,6 @@
                                 <h4 class="package-title">Premium Gaming</h4>
                                 <p class="package-price">39 DHS per person</p>
                                 <p class="package-description">All-day gaming</p>
-                            </div>
-                            <div class="package-option" data-package="game-dine">
-                                <h4 class="package-title">Game & Dine</h4>
-                                <p class="package-price">79 DHS per person</p>
-                                <p class="package-description">2 hours of gaming + main course and drink</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group food-preselection" style="display: none;">
-                        <label class="form-label">Pre-select Food & Drinks</label>
-                        <p class="form-hint">Your selections will be ready when you arrive</p>
-                        
-                        <div class="food-tabs">
-                            <button type="button" class="food-tab active" data-tab="main-course">Main Course</button>
-                            <button type="button" class="food-tab" data-tab="breakfast">Breakfast</button>
-                            <button type="button" class="food-tab" data-tab="sour-dough">Sour Dough</button>
-                            <button type="button" class="food-tab" data-tab="kids-menu">Kids Menu</button>
-                            <button type="button" class="food-tab" data-tab="drinks">Drinks</button>
-                        </div>
-                        
-                        <div class="food-content active" id="main-course-content">
-                            <div class="food-grid">
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-1" name="food" value="Bacon Avocado Cheeseburger">
-                                    <label for="food-1">Bacon Avocado Cheeseburger (42 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-2" name="food" value="Baked Salmon">
-                                    <label for="food-2">Baked Salmon (72 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-3" name="food" value="BBQ Cheeseburger">
-                                    <label for="food-3">BBQ Cheeseburger (37 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-4" name="food" value="Black Truffle Burger">
-                                    <label for="food-4">Black Truffle Burger (45 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-5" name="food" value="Chick Fil A">
-                                    <label for="food-5">Chick Fil A (39 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-6" name="food" value="Creamy Tuscan">
-                                    <label for="food-6">Creamy Tuscan (39 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-7" name="food" value="Teriyaki Salmon Bowl">
-                                    <label for="food-7">Teriyaki Salmon Bowl (39 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-8" name="food" value="Spicy Corn">
-                                    <label for="food-8">Spicy Corn (39 DHS)</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="food-content" id="breakfast-content">
-                            <div class="food-grid">
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-9" name="food" value="Breakfast Waffle">
-                                    <label for="food-9">Breakfast Waffle (44 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-10" name="food" value="French Toast with Berries">
-                                    <label for="food-10">French Toast with Berries (51 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-11" name="food" value="Classic English Breakfast">
-                                    <label for="food-11">Classic English Breakfast (66 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-12" name="food" value="Vegetarian English Breakfast">
-                                    <label for="food-12">Vegetarian English Breakfast (50 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-13" name="food" value="Keto Breakfast">
-                                    <label for="food-13">Keto Breakfast (55 DHS)</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="food-content" id="sour-dough-content">
-                            <div class="food-grid">
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-14" name="food" value="Avocado and Salmon Toast">
-                                    <label for="food-14">Avocado and Salmon Toast (53 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-15" name="food" value="PB and Berry Jam Toast">
-                                    <label for="food-15">PB and Berry Jam Toast (40 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-16" name="food" value="Spicy Creamy Mushroom toast">
-                                    <label for="food-16">Spicy Creamy Mushroom toast (42 DHS)</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="food-content" id="kids-menu-content">
-                            <div class="food-grid">
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-17" name="food" value="Egg Benedict bacon (Kids)">
-                                    <label for="food-17">Egg Benedict bacon (Kids) (31 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-18" name="food" value="English Breakfast (Kids)">
-                                    <label for="food-18">English Breakfast (Kids) (32 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-19" name="food" value="Waffle With Berries (Kids)">
-                                    <label for="food-19">Waffle With Berries (Kids) (30 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-20" name="food" value="Spaghetti Bolognese (Kids)">
-                                    <label for="food-20">Spaghetti Bolognese (Kids) (31 DHS)</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="food-content" id="drinks-content">
-                            <div class="food-grid">
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-21" name="food" value="Coffee">
-                                    <label for="food-21">Coffee (18 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-22" name="food" value="Latte">
-                                    <label for="food-22">Latte (22 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-23" name="food" value="Fresh Juice">
-                                    <label for="food-23">Fresh Juice (25 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-24" name="food" value="Iced Tea">
-                                    <label for="food-24">Iced Tea (20 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-25" name="food" value="Milkshake">
-                                    <label for="food-25">Milkshake (28 DHS)</label>
-                                </div>
-                                <div class="food-item">
-                                    <input type="checkbox" id="food-26" name="food" value="Hot Chocolate">
-                                    <label for="food-26">Hot Chocolate (24 DHS)</label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -472,49 +334,67 @@
                         <h4 class="form-section-title">3. Package Selection</h4>
                         
                         <div class="large-group-packages">
-                            <div class="package-option" data-package="standard-group">
-                                <h4 class="package-title">Standard Group Package</h4>
-                                <p class="package-price">35 DHS per person</p>
+                            <div class="package-option" data-package="drinks-only">
+                                <h4 class="package-title">Drinks Package</h4>
+                                <p class="package-price">28 AED per person</p>
                                 <ul class="package-features">
-                                    <li>3 hours of gaming</li>
-                                    <li>Reserved tables</li>
+                                    <li>Cold/Hot coffee</li>
+                                    <li>Mocktails</li>
+                                    <li>Milkshakes</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="package-option" data-package="starter-platter">
+                                <h4 class="package-title">Customized Starter Platter</h4>
+                                <p class="package-price">72 AED per table</p>
+                                <ul class="package-features">
+                                    <li>French Fries</li>
+                                    <li>Chicken tenders</li>
+                                    <li>Mozzarella sticks</li>
+                                    <li>Nachos and Cheesy risotto Balls</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="package-option" data-package="main-course">
+                                <h4 class="package-title">Main Course + Drink</h4>
+                                <p class="package-price">62 AED per person</p>
+                                <ul class="package-features">
+                                    <li>Select Menu options including:</li>
+                                    <li>Grilled Chicken Alfredo</li>
+                                    <li>Grilled Shrimp Arabiata</li>
+                                    <li>Bacon Avocado Cheese Burger</li>
+                                    <li>Beef Burger</li>
+                                    <li>Classic Club Sandwich</li>
+                                    <li>Veggie Burger</li>
+                                    <li>BBQ Cheese Burger</li>
+                                    <li>Any drink</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="package-option" data-package="complete-menu">
+                                <h4 class="package-title">Complete Menu + Drink</h4>
+                                <p class="package-price">69 AED per person</p>
+                                <ul class="package-features">
+                                    <li>Full menu selection</li>
+                                    <li>Any drink</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="package-option" data-package="gaming-2hr">
+                                <h4 class="package-title">Board Games (2 hours)</h4>
+                                <p class="package-price">20 AED per person</p>
+                                <ul class="package-features">
+                                    <li>2 hours of gaming</li>
                                     <li>Game host assistance</li>
                                 </ul>
                             </div>
                             
-                            <div class="package-option" data-package="premium-group">
-                                <h4 class="package-title">Premium Group Package</h4>
-                                <p class="package-price">65 DHS per person</p>
+                            <div class="package-option" data-package="gaming-all-day">
+                                <h4 class="package-title">Whole Day Gaming</h4>
+                                <p class="package-price">30 AED per person</p>
                                 <ul class="package-features">
-                                    <li>4 hours of gaming</li>
-                                    <li>Reserved tables</li>
+                                    <li>Unlimited gaming all day</li>
                                     <li>Game host assistance</li>
-                                    <li>Snacks and soft drinks</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="package-option" data-package="deluxe-group">
-                                <h4 class="package-title">Deluxe Group Package</h4>
-                                <p class="package-price">95 DHS per person</p>
-                                <ul class="package-features">
-                                    <li>5 hours of gaming</li>
-                                    <li>Reserved tables</li>
-                                    <li>Game host assistance</li>
-                                    <li>Full meal and drinks</li>
-                                    <li>Private area (if available)</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="package-option" data-package="corporate">
-                                <h4 class="package-title">Corporate Package</h4>
-                                <p class="package-price">120 DHS per person</p>
-                                <ul class="package-features">
-                                    <li>Full day access</li>
-                                    <li>Reserved tables</li>
-                                    <li>Game host assistance</li>
-                                    <li>Full meal and drinks</li>
-                                    <li>Private area</li>
-                                    <li>Team building activities</li>
                                 </ul>
                             </div>
                         </div>
@@ -527,89 +407,7 @@
                     
                     <!-- Food Preselection -->
                     <div class="form-section">
-                        <h4 class="form-section-title">4. Food Preselection</h4>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Would you like to pre-select food?</label>
-                            <div class="radio-options">
-                                <div class="radio-option">
-                                    <input type="radio" id="food-yes" name="food-preselect" value="yes">
-                                    <label for="food-yes">Yes</label>
-                                </div>
-                                <div class="radio-option">
-                                    <input type="radio" id="food-no" name="food-preselect" value="no" checked>
-                                    <label for="food-no">No</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="large-group-food" style="display: none;">
-                            <div class="form-group">
-                                <label class="form-label">Select Food Options</label>
-                                <p class="form-hint">For large groups, we recommend selecting a few options that will be served family-style or as a buffet.</p>
-                                
-                                <div class="food-tabs">
-                                    <button type="button" class="food-tab active" data-tab="group-main">Main Course</button>
-                                    <button type="button" class="food-tab" data-tab="group-breakfast">Breakfast</button>
-                                    <button type="button" class="food-tab" data-tab="group-sides">Sides & Appetizers</button>
-                                    <button type="button" class="food-tab" data-tab="group-drinks">Drinks</button>
-                                </div>
-                                
-                                <div class="food-content active" id="group-main-content">
-                                    <div class="food-grid">
-                                        <div class="food-item">
-                                            <input type="checkbox" id="group-food-1" name="group-food" value="Bacon Avocado Cheeseburger">
-                                            <label for="group-food-1">Bacon Avocado Cheeseburger (42 DHS)</label>
-                                        </div>
-                                        <div class="food-item">
-                                            <input type="checkbox" id="group-food-2" name="group-food" value="Baked Salmon">
-                                            <label for="group-food-2">Baked Salmon (72 DHS)</label>
-                                        </div>
-                                        <div class="food-item">
-                                            <input type="checkbox" id="group-food-3" name="group-food" value="BBQ Cheeseburger">
-                                            <label for="group-food-3">BBQ Cheeseburger (37 DHS)</label>
-                                        </div>
-                                        <div class="food-item">
-                                            <input type="checkbox" id="group-food-4" name="group-food" value="Black Truffle Burger">
-                                            <label for="group-food-4">Black Truffle Burger (45 DHS)</label>
-                                        </div>
-                                        <div class="food-item">
-                                            <input type="checkbox" id="group-food-5" name="group-food" value="Chick Fil A">
-                                            <label for="group-food-5">Chick Fil A (39 DHS)</label>
-                                        </div>
-                                        <div class="food-item">
-                                            <input type="checkbox" id="group-food-6" name="group-food" value="Creamy Tuscan">
-                                            <label for="group-food-6">Creamy Tuscan (39 DHS)</label>
-                                        </div>
-                                        <div class="food-item">
-                                            <input type="checkbox" id="group-food-7" name="group-food" value="Teriyaki Salmon Bowl">
-                                            <label for="group-food-7">Teriyaki Salmon Bowl (39 DHS)</label>
-                                        </div>
-                                        <div class="food-item">
-                                            <input type="checkbox" id="group-food-8" name="group-food" value="Spicy Corn">
-                                            <label for="group-food-8">Spicy Corn (39 DHS)</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Other food tabs content would go here -->
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="serving-time" class="form-label">Preferred Serving Time</label>
-                                <input type="time" id="serving-time" class="form-control">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="dietary-restrictions" class="form-label">Dietary Restrictions or Allergies</label>
-                                <textarea id="dietary-restrictions" class="form-control" rows="3" placeholder="Please list any dietary restrictions or allergies..."></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Additional Requests -->
-                    <div class="form-section">
-                        <h4 class="form-section-title">5. Additional Requests or Notes</h4>
+                        <h4 class="form-section-title">4. Additional Requests or Notes</h4>
                         
                         <div class="form-group">
                             <label for="event-notes" class="form-label">Special Requests</label>

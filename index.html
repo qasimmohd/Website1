@@ -9,12 +9,22 @@
     <link rel="stylesheet" href="css/decorative-elements.css">
     <link rel="stylesheet" href="css/cafe-details.css">
     <link rel="stylesheet" href="css/about-features.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/static-vines.css">
+    <link rel="stylesheet" href="css/header-background.css">
+    <link rel="stylesheet" href="css/clean-design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header paneled-wall">
+        <div class="hanging-vines-container">
+            <div class="hanging-vine vine-1" style="left: 5%;"></div>
+            <div class="hanging-vine vine-2" style="left: 25%;"></div>
+            <div class="hanging-vine vine-3" style="left: 45%;"></div>
+            <div class="hanging-vine vine-1" style="left: 65%;"></div>
+            <div class="hanging-vine vine-2" style="left: 85%;"></div>
+        </div>
         <div class="container header-content">
             <a href="index.html">
                 <img src="images/dna_logo_no_bg.png" alt="DNA Board Game Cafe" class="logo">
@@ -25,7 +35,6 @@
                     <li class="nav-item"><a href="games.html" class="nav-link">Games</a></li>
                     <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
                     <li class="nav-item"><a href="reservations.html" class="nav-link">Reservations</a></li>
-                    <li class="nav-item"><a href="#rates" class="nav-link">Gaming Rates</a></li>
                 </ul>
             </nav>
         </div>
@@ -77,6 +86,79 @@
                         <span class="feature-tag">Specialty Coffee</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Rates Section -->
+    <section id="rates" class="section">
+        <div class="container">
+            <h2 class="section-title">Gaming Rates</h2>
+            <p class="section-subtitle">Enjoy our board games at affordable rates (all charges are per person)</p>
+            
+            <div class="gaming-rates">
+                <div class="chess-piece-decoration knight-decoration"></div>
+                <div class="chess-piece-decoration pawn-decoration"></div>
+                <div class="chess-piece-decoration dice-decoration"></div>
+                <div class="chess-piece-decoration card-decoration"></div>
+                
+                <h3 class="gaming-rates-title">Individual Gaming Packages</h3>
+                <p class="gaming-rates-subtitle">Choose the perfect gaming experience for you and your friends</p>
+                
+                <div class="rates-grid">
+                    <div class="rate-card">
+                        <h4 class="rate-card-title">Quick Play</h4>
+                        <p class="rate-card-price">19 DHS</p>
+                        <p class="rate-card-description">Perfect for a quick gaming session</p>
+                        <ul class="rate-card-features">
+                            <li>1 hour of gaming</li>
+                            <li>Access to all games</li>
+                            <li>Game guide assistance</li>
+                        </ul>
+                        <div class="rate-card-cta">
+                            <a href="reservations.html" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="rate-card">
+                        <h4 class="rate-card-title">Standard Play</h4>
+                        <p class="rate-card-price">29 DHS</p>
+                        <p class="rate-card-description">Our most popular option</p>
+                        <ul class="rate-card-features">
+                            <li>2 hours of gaming</li>
+                            <li>Access to all games</li>
+                            <li>Game guide assistance</li>
+                        </ul>
+                        <div class="rate-card-cta">
+                            <a href="reservations.html" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="rate-card">
+                        <h4 class="rate-card-title">All-Day Gaming</h4>
+                        <p class="rate-card-price">39 DHS</p>
+                        <p class="rate-card-description">For the dedicated board gamer</p>
+                        <ul class="rate-card-features">
+                            <li>Unlimited gaming all day</li>
+                            <li>Access to all games</li>
+                            <li>Game guide assistance</li>
+                            <li>Priority table reservation</li>
+                        </ul>
+                        <div class="rate-card-cta">
+                            <a href="reservations.html" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group-rates">
+                    <h3 class="group-rates-title">Group & Event Packages</h3>
+                    <p class="group-rates-description">Special rates available for groups of 12 or more people</p>
+                    <div class="rate-card-cta">
+                        <a href="reservations.html" class="btn btn-primary">View Group Packages</a>
+                    </div>
+                </div>
+                
+                <p class="gaming-rates-note">All packages include access to our extensive collection of board games and game guide assistance when needed.</p>
             </div>
         </div>
     </section>
@@ -161,88 +243,12 @@
         </div>
     </section>
 
-    <!-- Gaming Rates Section -->
-    <section id="rates" class="section">
-        <div class="container">
-            <h2 class="section-title">Gaming Rates</h2>
-            <p class="section-subtitle">Enjoy our board games at affordable rates</p>
-            
-            <div class="gaming-rates">
-                <div class="chess-piece-decoration knight-decoration"></div>
-                <div class="chess-piece-decoration pawn-decoration"></div>
-                <div class="chess-piece-decoration dice-decoration"></div>
-                <div class="chess-piece-decoration card-decoration"></div>
-                
-                <h3 class="gaming-rates-title">Individual Gaming Packages</h3>
-                <p class="gaming-rates-subtitle">Choose the perfect gaming experience for you and your friends</p>
-                
-                <div class="rates-grid">
-                    <div class="rate-card">
-                        <h4 class="rate-card-title">Quick Play</h4>
-                        <p class="rate-card-price">19 DHS</p>
-                        <p class="rate-card-description">Perfect for a quick gaming session</p>
-                        <ul class="rate-card-features">
-                            <li>1 hour of gaming</li>
-                            <li>Access to all games</li>
-                            <li>Game guide assistance</li>
-                        </ul>
-                        <div class="rate-card-cta">
-                            <a href="reservations.html" class="btn btn-secondary">Book Now</a>
-                        </div>
-                    </div>
-                    
-                    <div class="rate-card">
-                        <h4 class="rate-card-title">Standard Play</h4>
-                        <p class="rate-card-price">29 DHS</p>
-                        <p class="rate-card-description">Our most popular option</p>
-                        <ul class="rate-card-features">
-                            <li>2 hours of gaming</li>
-                            <li>Access to all games</li>
-                            <li>Game guide assistance</li>
-                            <li>10% off drinks</li>
-                        </ul>
-                        <div class="rate-card-cta">
-                            <a href="reservations.html" class="btn btn-secondary">Book Now</a>
-                        </div>
-                    </div>
-                    
-                    <div class="rate-card">
-                        <h4 class="rate-card-title">All-Day Gaming</h4>
-                        <p class="rate-card-price">39 DHS</p>
-                        <p class="rate-card-description">For the dedicated board gamer</p>
-                        <ul class="rate-card-features">
-                            <li>Unlimited gaming all day</li>
-                            <li>Access to all games</li>
-                            <li>Game guide assistance</li>
-                            <li>15% off food and drinks</li>
-                            <li>Priority table reservation</li>
-                        </ul>
-                        <div class="rate-card-cta">
-                            <a href="reservations.html" class="btn btn-secondary">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="group-rates">
-                    <h3 class="group-rates-title">Group & Event Packages</h3>
-                    <p class="group-rates-description">Special rates available for groups of 12 or more people</p>
-                    <div class="rate-card-cta">
-                        <a href="reservations.html" class="btn btn-primary">View Group Packages</a>
-                    </div>
-                </div>
-                
-                <p class="gaming-rates-note">All packages include access to our extensive collection of board games and game guide assistance when needed.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Call to Action -->
     <section class="section" style="background-color: var(--navy-blue); color: var(--white);">
         <div class="container" style="text-align: center;">
             <h2 class="section-title" style="color: var(--white);">Ready to Play?</h2>
             <p style="margin-bottom: var(--spacing-lg);">Book your table now and experience the fun at DNA Board Game Cafe</p>
             <a href="reservations.html" class="btn" style="margin-right: var(--spacing-md);">Make a Reservation</a>
-            <a href="#rates" class="btn btn-outline">View Rates</a>
         </div>
     </section>
 
