@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - DNA Board Game Cafe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/decorative-elements.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html">
+                <img src="images/dna_logo.jpeg" alt="DNA Board Game Cafe" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="games.html" class="nav-link">Games</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li class="nav-item"><a href="reservations.html" class="nav-link">Reservations</a></li>
+                    <li class="nav-item"><a href="index.html#rates" class="nav-link">Gaming Rates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="hero" style="padding: var(--spacing-xl) 0;">
+        <div class="round-window round-window-1"></div>
+        <div class="hanging-plants"></div>
+        
+        <div class="container hero-content">
+            <h1 class="hero-title">Our Menu</h1>
+            <p class="hero-subtitle">Delicious food and drinks to enjoy while gaming</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Food & Drinks</h2>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-tab="business-lunch">Business Lunch</button>
+                <button class="menu-tab" data-tab="breakfast">Breakfast</button>
+                <button class="menu-tab" data-tab="sour-dough">Sour Dough</button>
+                <button class="menu-tab" data-tab="kids-menu">Kids Menu</button>
+                <button class="menu-tab" data-tab="drinks">Drinks</button>
+            </div>
+            
+            <!-- Business Lunch Menu -->
+            <div class="menu-content active" id="business-lunch">
+                <h3 class="menu-category">Business Lunch Menu</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/menu/chick-fil-a.jpg" alt="Chick Fil A" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Chick Fil A</h3>
+                            <p class="menu-item-description">Delicious chicken sandwich served with fries.</p>
+                            <p class="menu-item-price">39 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/creamy-tuscan.jpg" alt="Creamy Tuscan" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Creamy Tuscan</h3>
+                            <p class="menu-item-description">Creamy pasta with Tuscan flavors and herbs.</p>
+                            <p class="menu-item-price">39 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/teriyaki-salmon-bowl.jpg" alt="Teriyaki Salmon Bowl" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Teriyaki Salmon Bowl</h3>
+                            <p class="menu-item-description">Fresh salmon with teriyaki sauce served with rice and vegetables.</p>
+                            <p class="menu-item-price">39 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/spicy-corn.jpg" alt="Spicy Corn" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Spicy Corn</h3>
+                            <p class="menu-item-description">Grilled corn with spicy seasoning and herbs.</p>
+                            <p class="menu-item-price">39 DHS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Breakfast Menu -->
+            <div class="menu-content" id="breakfast">
+                <h3 class="menu-category">Breakfast</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/menu/breakfast-waffle.jpg" alt="Breakfast Waffle" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Breakfast Waffle</h3>
+                            <p class="menu-item-description">Delicious waffle topped with fresh berries and maple syrup.</p>
+                            <p class="menu-item-price">44 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/french-toast-berries.jpg" alt="French Toast with Berries" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">French Toast with Berries</h3>
+                            <p class="menu-item-description">Classic French toast served with fresh berries and syrup.</p>
+                            <p class="menu-item-price">51 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/classic-english-breakfast.jpg" alt="Classic English Breakfast" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Classic English Breakfast</h3>
+                            <p class="menu-item-description">Eggs, bacon, sausage, beans, toast, and grilled tomato.</p>
+                            <p class="menu-item-price">66 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/vegetarian-english-breakfast.jpg" alt="Vegetarian English Breakfast" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Vegetarian English Breakfast</h3>
+                            <p class="menu-item-description">Eggs, vegetarian sausage, beans, toast, mushrooms, and grilled tomato.</p>
+                            <p class="menu-item-price">50 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/keto-breakfast.jpg" alt="Keto Breakfast" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Keto Breakfast</h3>
+                            <p class="menu-item-description">Low-carb breakfast with eggs, avocado, and protein.</p>
+                            <p class="menu-item-price">55 DHS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sour Dough Menu -->
+            <div class="menu-content" id="sour-dough">
+                <h3 class="menu-category">Sour Dough</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/menu/avocado-salmon-toast.jpg" alt="Avocado and Salmon Toast" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Avocado and Salmon Toast</h3>
+                            <p class="menu-item-description">Sourdough toast topped with avocado, smoked salmon, and fresh greens.</p>
+                            <p class="menu-item-price">53 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/pb-berry-jam-toast.jpg" alt="PB and Berry Jam Toast" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">PB and Berry Jam Toast</h3>
+                            <p class="menu-item-description">Sourdough toast with peanut butter and berry jam.</p>
+                            <p class="menu-item-price">40 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/spicy-creamy-mushroom-toast.jpg" alt="Spicy Creamy Mushroom toast" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Spicy Creamy Mushroom Toast</h3>
+                            <p class="menu-item-description">Sourdough toast topped with creamy spiced mushrooms.</p>
+                            <p class="menu-item-price">42 DHS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kids Menu -->
+            <div class="menu-content" id="kids-menu">
+                <h3 class="menu-category">Kids Menu</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/menu/egg-benedict-bacon-kids.jpg" alt="Egg Benedict bacon (Kids)" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Egg Benedict bacon (Kids)</h3>
+                            <p class="menu-item-description">Kid-sized portion of eggs benedict with bacon.</p>
+                            <p class="menu-item-price">31 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/english-breakfast-kids.jpg" alt="English Breakfast (Kids)" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">English Breakfast (Kids)</h3>
+                            <p class="menu-item-description">Kid-sized English breakfast with eggs, bacon, and toast.</p>
+                            <p class="menu-item-price">32 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/waffle-berries-kids.jpg" alt="Waffle With Berries (Kids)" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Waffle With Berries (Kids)</h3>
+                            <p class="menu-item-description">Kid-sized waffle topped with fresh berries and syrup.</p>
+                            <p class="menu-item-price">30 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/spaghetti-bolognese-kids.jpg" alt="Spaghetti Bolognese (Kids)" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Spaghetti Bolognese (Kids)</h3>
+                            <p class="menu-item-description">Kid-sized portion of spaghetti with bolognese sauce.</p>
+                            <p class="menu-item-price">31 DHS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Drinks Menu -->
+            <div class="menu-content" id="drinks">
+                <h3 class="menu-category">Drinks</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/menu/coffee.jpg" alt="Coffee" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Coffee</h3>
+                            <p class="menu-item-description">Freshly brewed coffee.</p>
+                            <p class="menu-item-price">18 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/latte.jpg" alt="Latte" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Latte</h3>
+                            <p class="menu-item-description">Espresso with steamed milk.</p>
+                            <p class="menu-item-price">22 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/fresh-juice.jpg" alt="Fresh Juice" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Fresh Juice</h3>
+                            <p class="menu-item-description">Choice of orange, apple, or mixed fruit juice.</p>
+                            <p class="menu-item-price">25 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/iced-tea.jpg" alt="Iced Tea" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Iced Tea</h3>
+                            <p class="menu-item-description">Refreshing iced tea with lemon.</p>
+                            <p class="menu-item-price">20 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/milkshake.jpg" alt="Milkshake" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Milkshake</h3>
+                            <p class="menu-item-description">Choice of chocolate, vanilla, or strawberry.</p>
+                            <p class="menu-item-price">28 DHS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="images/menu/hot-chocolate.jpg" alt="Hot Chocolate" class="menu-item-img">
+                        <div class="menu-item-content">
+                            <h3 class="menu-item-title">Hot Chocolate</h3>
+                            <p class="menu-item-description">Rich hot chocolate topped with whipped cream.</p>
+                            <p class="menu-item-price">24 DHS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="section" style="background-color: var(--navy-blue); color: var(--white);">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">Special Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-content">
+                        <h3 class="offer-title" style="color: var(--gold);">Game & Dine Package</h3>
+                        <p class="offer-description">Enjoy 2 hours of gaming with any main course and drink.</p>
+                        <p class="offer-price">79 DHS per person</p>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-content">
+                        <h3 class="offer-title" style="color: var(--gold);">Group Special</h3>
+                        <p class="offer-description">Groups of 4 or more get 10% off food and 1 extra hour of gaming.</p>
+                        <p class="offer-note">Valid Sunday to Thursday</p>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-content">
+                        <h3 class="offer-title" style="color: var(--gold);">Birthday Celebration</h3>
+                        <p class="offer-description">Birthday person gets free gaming with purchase of any meal.</p>
+                        <p class="offer-note">Valid with ID on birthday week</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="images/dna_logo.jpeg" alt="DNA Board Game Cafe" style="width: 150px; margin-bottom: var(--spacing-md);">
+                    <p>Where strategy meets fun in a cozy atmosphere.</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="games.html">Games</a></li>
+                        <li class="footer-link"><a href="menu.html">Menu</a></li>
+                        <li class="footer-link"><a href="reservations.html">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link">Phone: +971 XX XXX XXXX</li>
+                        <li class="footer-link">Email: info@dnaboardgamescafe.com</li>
+                        <li class="footer-link">Address: Dubai, UAE</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DNA Board Game Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/decorative-elements.js"></script>
+    <script>
+        // Menu tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuTabs = document.querySelectorAll('.menu-tab');
+            const menuContents = document.querySelectorAll('.menu-content');
+            
+            menuTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs and contents
+                    menuTabs.forEach(t => t.classList.remove('active'));
+                    menuContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

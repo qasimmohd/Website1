@@ -1,0 +1,165 @@
+/* Additional CSS for gaming rates section */
+.gaming-rates {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--spacing-xl);
+}
+
+.gaming-rates-title {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  font-size: 2rem;
+}
+
+.gaming-rates-subtitle {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.rates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.rate-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  text-align: center;
+  border: 2px solid var(--gold);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.rate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.rate-card-title {
+  color: var(--gold);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.rate-card-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.rate-card-description {
+  margin-bottom: var(--spacing-md);
+}
+
+.rate-card-features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.rate-card-features li {
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  padding-left: 25px;
+}
+
+.rate-card-features li:before {
+  content: "♟";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.rate-card-cta {
+  margin-top: var(--spacing-md);
+}
+
+.group-rates {
+  margin-top: var(--spacing-xl);
+}
+
+.group-rates-title {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.group-rates-description {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.gaming-rates-note {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Decorative elements */
+.chess-piece-decoration {
+  position: absolute;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.knight-decoration {
+  top: 20px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  background-image: url('../images/chess-knight.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pawn-decoration {
+  bottom: 30px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/chess-pawn.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dice-decoration {
+  top: 50%;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/dice.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card-decoration {
+  bottom: 40px;
+  right: 60px;
+  width: 70px;
+  height: 50px;
+  background-image: url('../images/cards.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .rates-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rate-card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}

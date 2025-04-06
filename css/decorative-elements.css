@@ -1,0 +1,167 @@
+/* Board game themed decorative elements */
+.chess-piece {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.chess-piece:hover {
+  transform: translateY(-5px) rotate(5deg);
+}
+
+.chess-pawn {
+  background-image: url('../images/chess-pawn.svg');
+}
+
+.chess-knight {
+  background-image: url('../images/chess-knight.svg');
+}
+
+.chess-rook {
+  background-image: url('../images/chess-rook.svg');
+}
+
+.chess-bishop {
+  background-image: url('../images/chess-bishop.svg');
+}
+
+.chess-queen {
+  background-image: url('../images/chess-queen.svg');
+}
+
+.chess-king {
+  background-image: url('../images/chess-king.svg');
+}
+
+.dice {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('../images/dice.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  animation: dice-roll 10s infinite;
+}
+
+@keyframes dice-roll {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+}
+
+.card {
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transform: rotate(var(--rotation, 0deg));
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid var(--navy-blue);
+  border-radius: 2px;
+}
+
+.card-heart::after, .card-diamond::after, .card-club::after, .card-spade::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-heart::after {
+  background-image: url('../images/heart.svg');
+  color: red;
+}
+
+.card-diamond::after {
+  background-image: url('../images/diamond.svg');
+  color: red;
+}
+
+.card-club::after {
+  background-image: url('../images/club.svg');
+  color: black;
+}
+
+.card-spade::after {
+  background-image: url('../images/spade.svg');
+  color: black;
+}
+
+.meeple {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background-image: url('../images/meeple.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.meeple.red { filter: hue-rotate(0deg) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); }
+.meeple.blue { filter: hue-rotate(240deg) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); }
+.meeple.green { filter: hue-rotate(120deg) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); }
+.meeple.yellow { filter: hue-rotate(60deg) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); }
+
+/* Custom cursor styles */
+.chess-cursor {
+  cursor: url('../images/chess-knight-cursor.svg'), auto;
+}
+
+body {
+  cursor: url('../images/chess-knight-cursor.svg'), auto;
+}
+
+a, button, .btn, input[type="submit"] {
+  cursor: url('../images/chess-pawn-cursor.svg'), pointer;
+}
+
+/* Floating decorative elements */
+.floating-element {
+  position: absolute;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chess-piece, .dice, .card, .meeple {
+    display: none;
+  }
+}

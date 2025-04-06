@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - DNA Board Game Cafe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/decorative-elements.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html">
+                <img src="images/dna_logo.jpeg" alt="DNA Board Game Cafe" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="games.html" class="nav-link">Games</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="reservations.html" class="nav-link active">Reservations</a></li>
+                    <li class="nav-item"><a href="index.html#rates" class="nav-link">Gaming Rates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="hero" style="padding: var(--spacing-xl) 0;">
+        <div class="round-window round-window-1"></div>
+        <div class="hanging-plants"></div>
+        
+        <div class="container hero-content">
+            <h1 class="hero-title">Make a Reservation</h1>
+            <p class="hero-subtitle">Book your table and gaming experience</p>
+        </div>
+    </section>
+
+    <!-- Reservation Form Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Reservation Details</h2>
+            
+            <div class="reservation-tabs">
+                <button class="reservation-tab active" data-tab="standard">Standard Reservation</button>
+                <button class="reservation-tab" data-tab="large-group">Large Group (12+ People)</button>
+            </div>
+            
+            <!-- Standard Reservation Form -->
+            <div class="reservation-content active" id="standard-reservation">
+                <form class="reservation-form" id="standard-form">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="date" class="form-label">Date</label>
+                                <input type="date" id="date" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="time" class="form-label">Time</label>
+                                <input type="time" id="time" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="guests" class="form-label">Number of Guests</label>
+                                <select id="guests" class="form-control" required>
+                                    <option value="">Select number of guests</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6 People</option>
+                                    <option value="7">7 People</option>
+                                    <option value="8">8 People</option>
+                                    <option value="9">9 People</option>
+                                    <option value="10">10 People</option>
+                                    <option value="11">11 People</option>
+                                    <option value="12">12 People</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Package Selection</label>
+                        <div class="package-options">
+                            <div class="package-option" data-package="basic">
+                                <h4 class="package-title">Basic Gaming</h4>
+                                <p class="package-price">19 DHS per person</p>
+                                <p class="package-description">1 hour of gaming</p>
+                            </div>
+                            <div class="package-option" data-package="standard">
+                                <h4 class="package-title">Standard Gaming</h4>
+                                <p class="package-price">29 DHS per person</p>
+                                <p class="package-description">2 hours of gaming</p>
+                            </div>
+                            <div class="package-option" data-package="premium">
+                                <h4 class="package-title">Premium Gaming</h4>
+                                <p class="package-price">39 DHS per person</p>
+                                <p class="package-description">All-day gaming</p>
+                            </div>
+                            <div class="package-option" data-package="game-dine">
+                                <h4 class="package-title">Game & Dine</h4>
+                                <p class="package-price">79 DHS per person</p>
+                                <p class="package-description">2 hours of gaming + main course and drink</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group food-preselection" style="display: none;">
+                        <label class="form-label">Pre-select Food & Drinks</label>
+                        <p class="form-hint">Your selections will be ready when you arrive</p>
+                        
+                        <div class="food-tabs">
+                            <button type="button" class="food-tab active" data-tab="main-course">Main Course</button>
+                            <button type="button" class="food-tab" data-tab="breakfast">Breakfast</button>
+                            <button type="button" class="food-tab" data-tab="sour-dough">Sour Dough</button>
+                            <button type="button" class="food-tab" data-tab="kids-menu">Kids Menu</button>
+                            <button type="button" class="food-tab" data-tab="drinks">Drinks</button>
+                        </div>
+                        
+                        <div class="food-content active" id="main-course-content">
+                            <div class="food-grid">
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-1" name="food" value="Bacon Avocado Cheeseburger">
+                                    <label for="food-1">Bacon Avocado Cheeseburger (42 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-2" name="food" value="Baked Salmon">
+                                    <label for="food-2">Baked Salmon (72 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-3" name="food" value="BBQ Cheeseburger">
+                                    <label for="food-3">BBQ Cheeseburger (37 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-4" name="food" value="Black Truffle Burger">
+                                    <label for="food-4">Black Truffle Burger (45 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-5" name="food" value="Chick Fil A">
+                                    <label for="food-5">Chick Fil A (39 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-6" name="food" value="Creamy Tuscan">
+                                    <label for="food-6">Creamy Tuscan (39 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-7" name="food" value="Teriyaki Salmon Bowl">
+                                    <label for="food-7">Teriyaki Salmon Bowl (39 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-8" name="food" value="Spicy Corn">
+                                    <label for="food-8">Spicy Corn (39 DHS)</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="food-content" id="breakfast-content">
+                            <div class="food-grid">
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-9" name="food" value="Breakfast Waffle">
+                                    <label for="food-9">Breakfast Waffle (44 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-10" name="food" value="French Toast with Berries">
+                                    <label for="food-10">French Toast with Berries (51 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-11" name="food" value="Classic English Breakfast">
+                                    <label for="food-11">Classic English Breakfast (66 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-12" name="food" value="Vegetarian English Breakfast">
+                                    <label for="food-12">Vegetarian English Breakfast (50 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-13" name="food" value="Keto Breakfast">
+                                    <label for="food-13">Keto Breakfast (55 DHS)</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="food-content" id="sour-dough-content">
+                            <div class="food-grid">
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-14" name="food" value="Avocado and Salmon Toast">
+                                    <label for="food-14">Avocado and Salmon Toast (53 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-15" name="food" value="PB and Berry Jam Toast">
+                                    <label for="food-15">PB and Berry Jam Toast (40 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-16" name="food" value="Spicy Creamy Mushroom toast">
+                                    <label for="food-16">Spicy Creamy Mushroom toast (42 DHS)</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="food-content" id="kids-menu-content">
+                            <div class="food-grid">
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-17" name="food" value="Egg Benedict bacon (Kids)">
+                                    <label for="food-17">Egg Benedict bacon (Kids) (31 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-18" name="food" value="English Breakfast (Kids)">
+                                    <label for="food-18">English Breakfast (Kids) (32 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-19" name="food" value="Waffle With Berries (Kids)">
+                                    <label for="food-19">Waffle With Berries (Kids) (30 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-20" name="food" value="Spaghetti Bolognese (Kids)">
+                                    <label for="food-20">Spaghetti Bolognese (Kids) (31 DHS)</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="food-content" id="drinks-content">
+                            <div class="food-grid">
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-21" name="food" value="Coffee">
+                                    <label for="food-21">Coffee (18 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-22" name="food" value="Latte">
+                                    <label for="food-22">Latte (22 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-23" name="food" value="Fresh Juice">
+                                    <label for="food-23">Fresh Juice (25 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-24" name="food" value="Iced Tea">
+                                    <label for="food-24">Iced Tea (20 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-25" name="food" value="Milkshake">
+                                    <label for="food-25">Milkshake (28 DHS)</label>
+                                </div>
+                                <div class="food-item">
+                                    <input type="checkbox" id="food-26" name="food" value="Hot Chocolate">
+                                    <label for="food-26">Hot Chocolate (24 DHS)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="special-events" class="form-label">Special Events</label>
+                        <select id="special-events" class="form-control">
+                            <option value="none">None</option>
+                            <option value="trivia">Trivia Night</option>
+                            <option value="birthday">Birthday Celebration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Birthday Celebration Options -->
+                    <div class="birthday-options" style="display: none;">
+                        <h3 style="color: var(--navy-blue); margin-top: var(--spacing-lg);">Birthday Cake Customization</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="cake-size" class="form-label">Cake Size</label>
+                                    <select id="cake-size" class="form-control">
+                                        <option value="small">Small (4-6 people)</option>
+                                        <option value="medium">Medium (8-10 people)</option>
+                                        <option value="large">Large (12-16 people)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="cake-flavor" class="form-label">Cake Flavor</label>
+                                    <select id="cake-flavor" class="form-control">
+                                        <option value="chocolate">Chocolate</option>
+                                        <option value="vanilla">Vanilla</option>
+                                        <option value="red-velvet">Red Velvet</option>
+                                        <option value="carrot">Carrot</option>
+                                        <option value="cheesecake">Cheesecake</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="frosting" class="form-label">Frosting Type</label>
+                                    <select id="frosting" class="form-control">
+                                        <option value="buttercream">Buttercream</option>
+                                        <option value="cream-cheese">Cream Cheese</option>
+                                        <option value="fondant">Fondant</option>
+                                        <option value="ganache">Chocolate Ganache</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="cake-color" class="form-label">Frosting Color</label>
+                                    <select id="cake-color" class="form-control">
+                                        <option value="white">White</option>
+                                        <option value="chocolate">Chocolate</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="yellow">Yellow</option>
+                                        <option value="green">Green</option>
+                                        <option value="rainbow">Rainbow</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cake-message" class="form-label">Cake Message</label>
+                            <input type="text" id="cake-message" class="form-control" placeholder="e.g., Happy Birthday John!">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Decorations</label>
+                            <div class="decoration-options">
+                                <div class="decoration-item">
+                                    <input type="checkbox" id="deco-1" name="decoration" value="Candles">
+                                    <label for="deco-1">Candles</label>
+                                </div>
+                                <div class="decoration-item">
+                                    <input type="checkbox" id="deco-2" name="decoration" value="Sprinkles">
+                                    <label for="deco-2">Sprinkles</label>
+                                </div>
+                                <div class="decoration-item">
+                                    <input type="checkbox" id="deco-3" name="decoration" value="Fruit Topping">
+                                    <label for="deco-3">Fruit Topping</label>
+                                </div>
+                                <div class="decoration-item">
+                                    <input type="checkbox" id="deco-4" name="decoration" value="Chocolate Shavings">
+                                    <label for="deco-4">Chocolate Shavings</label>
+                                </div>
+                                <div class="decoration-item">
+                                    <input type="checkbox" id="deco-5" name="decoration" value="Board Game Themed">
+                                    <label for="deco-5">Board Game Themed</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes" class="form-label">Special Requests</label>
+                        <textarea id="notes" class="form-control" rows="4" placeholder="Any special requests or notes for your reservation..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Book Reservation</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Large Group Booking Form -->
+            <div class="reservation-content" id="large-group-reservation">
+                <form class="reservation-form" id="large-group-form">
+                    <h3 style="color: var(--navy-blue); margin-bottom: var(--spacing-lg);">Event Booking for Groups of 12+</h3>
+                    
+                    <!-- Event Information -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">1. Event Information</h4>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="event-date" class="form-label">Date of Event</label>
+                                    <input type="date" id="event-date" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="form-label">Time Slot</label>
+                                    <div class="time-slot-inputs">
+                                        <input type="time" id="event-time-from" class="form-control" required>
+                                        <span>to</span>
+                                        <input type="time" id="event-time-to" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="event-guests" class="form-label">Number of Guests</label>
+                                    <input type="number" id="event-guests" class="form-control" min="12" required>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="event-type" class="form-label">Event Type</label>
+                                    <select id="event-type" class="form-control" required>
+                                        <option value="">Select event type</option>
+                                        <option value="birthday">Birthday</option>
+                                        <option value="corporate">Corporate</option>
+                                        <option value="casual">Casual Meetup</option>
+                                        <option value="team-building">Team Building</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">2. Contact Information</h4>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="organizer-name" class="form-label">Name of Organizer</label>
+                                    <input type="text" id="organizer-name" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="organizer-phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="organizer-phone" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organizer-email" class="form-label">Email Address</label>
+                            <input type="email" id="organizer-email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Package Selection -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">3. Package Selection</h4>
+                        
+                        <div class="large-group-packages">
+                            <div class="package-option" data-package="standard-group">
+                                <h4 class="package-title">Standard Group Package</h4>
+                                <p class="package-price">35 DHS per person</p>
+                                <ul class="package-features">
+                                    <li>3 hours of gaming</li>
+                                    <li>Reserved tables</li>
+                                    <li>Game host assistance</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="package-option" data-package="premium-group">
+                                <h4 class="package-title">Premium Group Package</h4>
+                                <p class="package-price">65 DHS per person</p>
+                                <ul class="package-features">
+                                    <li>4 hours of gaming</li>
+                                    <li>Reserved tables</li>
+                                    <li>Game host assistance</li>
+                                    <li>Snacks and soft drinks</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="package-option" data-package="deluxe-group">
+                                <h4 class="package-title">Deluxe Group Package</h4>
+                                <p class="package-price">95 DHS per person</p>
+                                <ul class="package-features">
+                                    <li>5 hours of gaming</li>
+                                    <li>Reserved tables</li>
+                                    <li>Game host assistance</li>
+                                    <li>Full meal and drinks</li>
+                                    <li>Private area (if available)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="package-option" data-package="corporate">
+                                <h4 class="package-title">Corporate Package</h4>
+                                <p class="package-price">120 DHS per person</p>
+                                <ul class="package-features">
+                                    <li>Full day access</li>
+                                    <li>Reserved tables</li>
+                                    <li>Game host assistance</li>
+                                    <li>Full meal and drinks</li>
+                                    <li>Private area</li>
+                                    <li>Team building activities</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="custom-package" class="form-label">Custom Package Requirements</label>
+                            <textarea id="custom-package" class="form-control" rows="3" placeholder="Describe any custom package requirements..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Food Preselection -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">4. Food Preselection</h4>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Would you like to pre-select food?</label>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="food-yes" name="food-preselect" value="yes">
+                                    <label for="food-yes">Yes</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="food-no" name="food-preselect" value="no" checked>
+                                    <label for="food-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="large-group-food" style="display: none;">
+                            <div class="form-group">
+                                <label class="form-label">Select Food Options</label>
+                                <p class="form-hint">For large groups, we recommend selecting a few options that will be served family-style or as a buffet.</p>
+                                
+                                <div class="food-tabs">
+                                    <button type="button" class="food-tab active" data-tab="group-main">Main Course</button>
+                                    <button type="button" class="food-tab" data-tab="group-breakfast">Breakfast</button>
+                                    <button type="button" class="food-tab" data-tab="group-sides">Sides & Appetizers</button>
+                                    <button type="button" class="food-tab" data-tab="group-drinks">Drinks</button>
+                                </div>
+                                
+                                <div class="food-content active" id="group-main-content">
+                                    <div class="food-grid">
+                                        <div class="food-item">
+                                            <input type="checkbox" id="group-food-1" name="group-food" value="Bacon Avocado Cheeseburger">
+                                            <label for="group-food-1">Bacon Avocado Cheeseburger (42 DHS)</label>
+                                        </div>
+                                        <div class="food-item">
+                                            <input type="checkbox" id="group-food-2" name="group-food" value="Baked Salmon">
+                                            <label for="group-food-2">Baked Salmon (72 DHS)</label>
+                                        </div>
+                                        <div class="food-item">
+                                            <input type="checkbox" id="group-food-3" name="group-food" value="BBQ Cheeseburger">
+                                            <label for="group-food-3">BBQ Cheeseburger (37 DHS)</label>
+                                        </div>
+                                        <div class="food-item">
+                                            <input type="checkbox" id="group-food-4" name="group-food" value="Black Truffle Burger">
+                                            <label for="group-food-4">Black Truffle Burger (45 DHS)</label>
+                                        </div>
+                                        <div class="food-item">
+                                            <input type="checkbox" id="group-food-5" name="group-food" value="Chick Fil A">
+                                            <label for="group-food-5">Chick Fil A (39 DHS)</label>
+                                        </div>
+                                        <div class="food-item">
+                                            <input type="checkbox" id="group-food-6" name="group-food" value="Creamy Tuscan">
+                                            <label for="group-food-6">Creamy Tuscan (39 DHS)</label>
+                                        </div>
+                                        <div class="food-item">
+                                            <input type="checkbox" id="group-food-7" name="group-food" value="Teriyaki Salmon Bowl">
+                                            <label for="group-food-7">Teriyaki Salmon Bowl (39 DHS)</label>
+                                        </div>
+                                        <div class="food-item">
+                                            <input type="checkbox" id="group-food-8" name="group-food" value="Spicy Corn">
+                                            <label for="group-food-8">Spicy Corn (39 DHS)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Other food tabs content would go here -->
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="serving-time" class="form-label">Preferred Serving Time</label>
+                                <input type="time" id="serving-time" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="dietary-restrictions" class="form-label">Dietary Restrictions or Allergies</label>
+                                <textarea id="dietary-restrictions" class="form-control" rows="3" placeholder="Please list any dietary restrictions or allergies..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Requests -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">5. Additional Requests or Notes</h4>
+                        
+                        <div class="form-group">
+                            <label for="event-notes" class="form-label">Special Requests</label>
+                            <textarea id="event-notes" class="form-control" rows="4" placeholder="Decorations, special arrangements, game preferences, etc."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit Event Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="images/dna_logo.jpeg" alt="DNA Board Game Cafe" style="width: 150px; margin-bottom: var(--spacing-md);">
+                    <p>Where strategy meets fun in a cozy atmosphere.</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="games.html">Games</a></li>
+                        <li class="footer-link"><a href="menu.html">Menu</a></li>
+                        <li class="footer-link"><a href="reservations.html">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link">Phone: +971 XX XXX XXXX</li>
+                        <li class="footer-link">Email: info@dnaboardgamescafe.com</li>
+                        <li class="footer-link">Address: Dubai, UAE</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DNA Board Game Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/decorative-elements.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Reservation tabs functionality
+            const reservationTabs = document.querySelectorAll('.reservation-tab');
+            const reservationContents = document.querySelectorAll('.reservation-content');
+            
+            reservationTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs and contents
+                    reservationTabs.forEach(t => t.classList.remove('active'));
+                    reservationContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab') + '-reservation';
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Package selection
+            const packageOptions = document.querySelectorAll('.package-option');
+            packageOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    packageOptions.forEach(o => o.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Show food preselection for Game & Dine package
+                    const foodPreselection = document.querySelector('.food-preselection');
+                    if (this.getAttribute('data-package') === 'game-dine') {
+                        foodPreselection.style.display = 'block';
+                    } else {
+                        foodPreselection.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Food tabs functionality
+            const foodTabs = document.querySelectorAll('.food-tab');
+            const foodContents = document.querySelectorAll('.food-content');
+            
+            foodTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Find the closest parent with food-tabs class
+                    const tabsContainer = this.closest('.food-tabs');
+                    // Find all tabs within this container
+                    const siblingTabs = tabsContainer.querySelectorAll('.food-tab');
+                    
+                    // Remove active class from sibling tabs
+                    siblingTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Get the tab ID
+                    const tabId = this.getAttribute('data-tab') + '-content';
+                    
+                    // Find the parent container of the content sections
+                    const contentParent = tabsContainer.parentElement;
+                    
+                    // Find all content sections within this parent
+                    const contentSections = contentParent.querySelectorAll('.food-content');
+                    
+                    // Hide all content sections
+                    contentSections.forEach(c => c.classList.remove('active'));
+                    
+                    // Show the corresponding content section
+                    contentParent.querySelector('#' + tabId).classList.add('active');
+                });
+            });
+            
+            // Special events selection
+            const specialEventsSelect = document.getElementById('special-events');
+            const birthdayOptions = document.querySelector('.birthday-options');
+            
+            specialEventsSelect.addEventListener('change', function() {
+                if (this.value === 'birthday') {
+                    birthdayOptions.style.display = 'block';
+                } else {
+                    birthdayOptions.style.display = 'none';
+                }
+            });
+            
+            // Large group food preselection
+            const foodPreselect = document.querySelectorAll('input[name="food-preselect"]');
+            const largeGroupFood = document.querySelector('.large-group-food');
+            
+            foodPreselect.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'yes') {
+                        largeGroupFood.style.display = 'block';
+                    } else {
+                        largeGroupFood.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Form submission
+            const standardForm = document.getElementById('standard-form');
+            const largeGroupForm = document.getElementById('large-group-form');
+            
+            standardForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your reservation! We will confirm your booking shortly.');
+                this.reset();
+            });
+            
+            largeGroupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your event booking request! Our team will contact you within 24 hours to confirm details.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>

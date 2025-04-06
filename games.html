@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - DNA Board Game Cafe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/decorative-elements.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html">
+                <img src="images/dna_logo.jpeg" alt="DNA Board Game Cafe" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="games.html" class="nav-link active">Games</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="reservations.html" class="nav-link">Reservations</a></li>
+                    <li class="nav-item"><a href="index.html#rates" class="nav-link">Gaming Rates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="hero" style="padding: var(--spacing-xl) 0;">
+        <div class="round-window round-window-1"></div>
+        <div class="hanging-plants"></div>
+        
+        <div class="container hero-content">
+            <h1 class="hero-title">Our Game Collection</h1>
+            <p class="hero-subtitle">Explore our extensive library of board games</p>
+        </div>
+    </section>
+
+    <!-- Game Catalog -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Game Catalog</h2>
+            
+            <div class="game-filters">
+                <button class="btn btn-outline active" data-filter="all">All Games</button>
+                <button class="btn btn-outline" data-filter="strategy">Strategy</button>
+                <button class="btn btn-outline" data-filter="family">Family</button>
+                <button class="btn btn-outline" data-filter="party">Party</button>
+                <button class="btn btn-outline" data-filter="card">Card Games</button>
+                <button class="btn btn-outline" data-filter="classic">Classic</button>
+            </div>
+            
+            <div class="games-grid">
+                <!-- Game cards will be dynamically generated here -->
+                <div class="game-card" data-category="strategy">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Cluedo</h3>
+                        <p class="game-description">A classic detective game where players solve a murder mystery by deducing who did it, with what weapon, and where.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 3-6 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 45 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 150 DHS</span>
+                            <span class="game-rent">Rent: 20 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="card">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Love Letter</h3>
+                        <p class="game-description">A game of risk, deduction, and luck as you attempt to deliver your love letter to the princess.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 2-4 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 20 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 80 DHS</span>
+                            <span class="game-rent">Rent: 15 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="family">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Kingdomino</h3>
+                        <p class="game-description">Build your kingdom tile by tile in this award-winning domino-style game.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 2-4 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 15 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 120 DHS</span>
+                            <span class="game-rent">Rent: 15 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="party">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Decrypto</h3>
+                        <p class="game-description">A team-based word game where you communicate in code to your teammates while preventing opponents from intercepting your messages.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 3-8 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 30 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 130 DHS</span>
+                            <span class="game-rent">Rent: 18 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="party">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Donner Dinner Party</h3>
+                        <p class="game-description">A social deduction game where players must determine who among them are cannibals before it's too late.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 4-10 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 30 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 110 DHS</span>
+                            <span class="game-rent">Rent: 15 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="family">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Ice Cool</h3>
+                        <p class="game-description">A flicking game where penguin students try to collect fish while avoiding the hall monitor.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 2-4 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 30 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 140 DHS</span>
+                            <span class="game-rent">Rent: 18 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="strategy">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Patchwork</h3>
+                        <p class="game-description">A two-player game about creating the most aesthetic and high-scoring patchwork quilt.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 2 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 30 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 100 DHS</span>
+                            <span class="game-rent">Rent: 15 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="card">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Port Royal</h3>
+                        <p class="game-description">A push-your-luck card game about hiring crew members and fulfilling contracts in a Caribbean port.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 2-5 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 20-50 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 90 DHS</span>
+                            <span class="game-rent">Rent: 15 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="party">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Ransom Notes</h3>
+                        <p class="game-description">A hilarious word game where players create funny ransom notes from a pile of word magnets.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 3-6 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 30 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 85 DHS</span>
+                            <span class="game-rent">Rent: 15 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="classic">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Chess</h3>
+                        <p class="game-description">The classic strategy game where two players control armies of pieces with different movement patterns to capture the opponent's king.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 2 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 30-60 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 120 DHS</span>
+                            <span class="game-rent">Rent: 15 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="classic">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Bananagrams</h3>
+                        <p class="game-description">A fast-paced word game where players race to build crossword grids using letter tiles.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 1-8 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 15 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 75 DHS</span>
+                            <span class="game-rent">Rent: 12 DHS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-card" data-category="card">
+                    <div class="game-img" style="background-color: var(--light-blue);"></div>
+                    <div class="game-content">
+                        <h3 class="game-title">Exploding Kittens</h3>
+                        <p class="game-description">A highly-strategic, kitty-powered version of Russian Roulette. Players draw cards until someone draws an Exploding Kitten and loses the game.</p>
+                        <div class="game-details">
+                            <span class="game-players"><i class="fas fa-user"></i> 2-5 Players</span>
+                            <span class="game-time"><i class="fas fa-clock"></i> 15 Min</span>
+                        </div>
+                        <div class="game-options">
+                            <span class="game-buy">Buy: 95 DHS</span>
+                            <span class="game-rent">Rent: 15 DHS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Condition Section -->
+    <section class="section" style="background-color: var(--navy-blue); color: var(--white);">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">Game Rental Information</h2>
+            <div class="rental-info">
+                <div class="rental-col">
+                    <h3 style="color: var(--gold);">Rental Periods</h3>
+                    <p>Games can be rented for different time periods:</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Hourly (during cafe visit)</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Daily (take home for 24 hours)</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Weekend (Friday to Sunday)</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Weekly (7 days)</li>
+                    </ul>
+                </div>
+                <div class="rental-col">
+                    <h3 style="color: var(--gold);">Game Components</h3>
+                    <p>All our games are regularly checked to ensure they include all necessary components. Each game includes:</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Complete set of game pieces</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Original instruction manual</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Game box in good condition</li>
+                    </ul>
+                </div>
+                <div class="rental-col">
+                    <h3 style="color: var(--gold);">Condition Policy</h3>
+                    <p>We maintain our games in excellent condition. When renting:</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Games are inspected before and after rental</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Damage fees apply for missing or damaged components</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Security deposit required for take-home rentals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="images/dna_logo.jpeg" alt="DNA Board Game Cafe" style="width: 150px; margin-bottom: var(--spacing-md);">
+                    <p>Where strategy meets fun in a cozy atmosphere.</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="games.html">Games</a></li>
+                        <li class="footer-link"><a href="menu.html">Menu</a></li>
+                        <li class="footer-link"><a href="reservations.html">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link">Phone: +971 XX XXX XXXX</li>
+                        <li class="footer-link">Email: info@dnaboardgamescafe.com</li>
+                        <li class="footer-link">Address: Dubai, UAE</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DNA Board Game Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/decorative-elements.js"></script>
+    <script>
+        // Game filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.game-filters button');
+            const gameCards = document.querySelectorAll('.game-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Show/hide game cards based on filter
+                    gameCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

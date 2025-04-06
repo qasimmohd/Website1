@@ -1,0 +1,809 @@
+/* DNA Board Game Cafe Theme - Based on the cafe's aesthetic */
+:root {
+  /* Primary Colors */
+  --navy-blue: #1a365d;       /* Main wall color from cafe image */
+  --gold: #d4af37;            /* Accent color from logo */
+  --white: #ffffff;           /* Ceiling color from cafe image */
+  --black: #000000;           /* Furniture color from cafe image */
+  
+  /* Secondary Colors */
+  --light-blue: #4a6fa5;      /* Lighter shade of navy blue */
+  --dark-blue: #0f2544;       /* Darker shade of navy blue */
+  --cream: #f5f5dc;           /* Neutral background color */
+  --light-gold: #f0e68c;      /* Lighter gold for hover effects */
+  
+  /* Functional Colors */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --error: #f44336;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-round: 50%;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  color: var(--text-dark);
+  background-color: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy-blue);
+  margin-bottom: var(--spacing-md);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: var(--navy-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Custom Cursor */
+html {
+  cursor: url('/images/chess-knight-cursor.png'), auto;
+}
+
+a, button, .clickable {
+  cursor: url('/images/chess-pawn-cursor.png'), pointer !important;
+}
+
+/* Header */
+.header {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: var(--spacing-md) 0;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--gold);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: var(--spacing-lg);
+}
+
+.nav-link {
+  color: var(--white);
+  font-weight: 500;
+  position: relative;
+  padding-bottom: var(--spacing-xs);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold);
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: var(--spacing-xxl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--white);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--gold);
+}
+
+.hero-text {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Round Window Effect */
+.round-window {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+  border: 10px solid var(--white);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.round-window-1 {
+  top: -100px;
+  right: 10%;
+}
+
+.round-window-2 {
+  bottom: -150px;
+  left: 5%;
+}
+
+/* Hanging Plants */
+.hanging-plants {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-image: url('/images/hanging-plants.png');
+  background-repeat: repeat-x;
+  background-position: center top;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.hanging-plants-circle {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url('/images/hanging-plants-circle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 2;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--gold);
+  color: var(--navy-blue);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-align: center;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  background-color: var(--light-gold);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--navy-blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-blue);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn-outline:hover {
+  background-color: var(--gold);
+  color: var(--navy-blue);
+}
+
+/* Section Styles */
+.section {
+  padding: var(--spacing-xxl) 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--gold);
+}
+
+/* Cards */
+.card {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: var(--spacing-lg);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-text {
+  margin-bottom: var(--spacing-md);
+}
+
+.card-price {
+  font-weight: 700;
+  color: var(--navy-blue);
+  font-size: 1.2rem;
+}
+
+/* Game Catalog */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.game-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.game-content {
+  padding: var(--spacing-md);
+}
+
+.game-title {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.game-description {
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Menu Section */
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--navy-blue);
+}
+
+.menu-tab {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  margin: 0 var(--spacing-xs);
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: all var(--transition-fast);
+}
+
+.menu-tab:hover,
+.menu-tab.active {
+  color: var(--navy-blue);
+  border-bottom-color: var(--gold);
+}
+
+.menu-content {
+  display: none;
+}
+
+.menu-content.active {
+  display: block;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.menu-item {
+  display: flex;
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.menu-item-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.menu-item-content {
+  padding: var(--spacing-md);
+  flex: 1;
+}
+
+.menu-item-title {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.menu-item-price {
+  font-weight: 700;
+  color: var(--navy-blue);
+}
+
+/* Reservation System */
+.reservation-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--navy-blue);
+  box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.form-col {
+  flex: 1;
+  padding: 0 10px;
+  min-width: 200px;
+}
+
+/* Package Selection */
+.package-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.package-option {
+  flex: 1;
+  min-width: 200px;
+  padding: var(--spacing-md);
+  border: 2px solid #ddd;
+  border-radius: var(--radius-md);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.package-option:hover,
+.package-option.selected {
+  border-color: var(--gold);
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+.package-title {
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.package-price {
+  font-size: 1.2rem;
+  color: var(--navy-blue);
+  margin-bottom: var(--spacing-xs);
+}
+
+.package-description {
+  font-size: 0.9rem;
+}
+
+/* Gaming Rates */
+.rates-container {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.rates-title {
+  color: var(--gold);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.rates-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.rate-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  border: 1px solid var(--gold);
+}
+
+.rate-title {
+  color: var(--gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.rate-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.rate-description {
+  font-size: 0.9rem;
+}
+
+/* Board Game Decorative Elements */
+.chess-piece {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.chess-knight {
+  background-image: url('/images/chess-knight.png');
+}
+
+.chess-pawn {
+  background-image: url('/images/chess-pawn.png');
+}
+
+.chess-rook {
+  background-image: url('/images/chess-rook.png');
+}
+
+.chess-bishop {
+  background-image: url('/images/chess-bishop.png');
+}
+
+.chess-queen {
+  background-image: url('/images/chess-queen.png');
+}
+
+.chess-king {
+  background-image: url('/images/chess-king.png');
+}
+
+.dice {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('/images/dice.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.card-deck {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background-image: url('/images/cards.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: var(--spacing-xl) 0;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--gold);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-title {
+  color: var(--gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-link {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-link a {
+  color: var(--white);
+}
+
+.footer-link a:hover {
+  color: var(--gold);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color var(--transition-fast);
+}
+
+.social-link:hover {
+  background-color: var(--gold);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: var(--spacing-xs) 0;
+    margin-left: 0;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .round-window {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .menu-grid,
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .menu-item {
+    flex-direction: column;
+  }
+  
+  .menu-item-img {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .package-options {
+    flex-direction: column;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+/* Animation for Hanging Plants */
+@keyframes sway {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hanging-plants {
+  animation: sway 5s ease-in-out infinite;
+}
+
+/* Black and White Tiled Floor Pattern */
+.tiled-floor {
+  background-image: 
+    linear-gradient(45deg, var(--black) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--black) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--black) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--black) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+}
