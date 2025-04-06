@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="80" viewBox="0 0 60 80">
+  <g>
+    <!-- Plant leaves -->
+    <path d="M30,10 C20,0 10,5 15,15" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+    <path d="M30,10 C40,0 50,5 45,15" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+    <path d="M30,15 C15,10 10,20 20,25" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+    <path d="M30,15 C45,10 50,20 40,25" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+    <path d="M30,20 C20,15 15,25 25,30" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+    <path d="M30,20 C40,15 45,25 35,30" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+    <path d="M30,25 C15,25 20,35 25,35" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+    <path d="M30,25 C45,25 40,35 35,35" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+    
+    <!-- Pot -->
+    <rect x="15" y="40" width="30" height="40" rx="3" ry="3" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+  </g>
+</svg>

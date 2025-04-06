@@ -1,0 +1,239 @@
+.wall-panel {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+}
+
+.gold-frame {
+    border: 5px solid var(--gold);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2px;
+    background-color: white;
+    margin: 15px 0;
+}
+
+.hanging-plant {
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    background-image: url('../images/hanging-plant.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    z-index: 2;
+}
+
+.hanging-plant-1 {
+    top: -60px;
+    left: 10%;
+}
+
+.hanging-plant-2 {
+    top: -50px;
+    right: 15%;
+}
+
+.gold-star {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/gold-star.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+
+.gold-star-1 {
+    bottom: 50px;
+    right: 10%;
+}
+
+.gold-star-2 {
+    top: 100px;
+    left: 5%;
+}
+
+.ceramic-planter {
+    width: 60px;
+    height: 80px;
+    background-color: white;
+    border-radius: 5px 5px 3px 3px;
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+}
+
+.ceramic-planter::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/plant-leaves.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.game-poster {
+    width: 120px;
+    height: 160px;
+    border: 2px solid #333;
+    position: relative;
+    margin: 15px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-poster::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 10px;
+    background-color: #333;
+}
+
+.game-poster::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 10px;
+    background-color: #333;
+}
+
+.monopoly-poster {
+    background-image: url('../images/monopoly-poster.jpg');
+}
+
+.vintage-record {
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.vintage-record::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.vintage-record::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hexagon-tile {
+    width: 60px;
+    height: 70px;
+    background-color: white;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon-tile-dark {
+    background-color: #eee;
+}
+
+.hexagon-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.gold-accent {
+    color: var(--gold);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.panel-molding {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gold-globe {
+    width: 60px;
+    height: 80px;
+    background-image: url('../images/gold-globe.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 15px;
+    display: inline-block;
+}
+
+.gold-candle {
+    width: 20px;
+    height: 60px;
+    background-color: white;
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+}
+
+.gold-candle::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background-color: var(--gold);
+    border-radius: 5px;
+}
+
+.gold-candle::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
