@@ -1,0 +1,29 @@
+/* Feature Tags Styling */
+.about-features {
+  margin-top: var(--spacing-xl);
+}
+
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+.feature-tag {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--navy-blue);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--gold);
+  transition: all var(--transition-fast);
+}
+
+.feature-tag:hover {
+  background-color: var(--gold);
+  color: var(--navy-blue);
+  transform: translateY(-2px);
+}

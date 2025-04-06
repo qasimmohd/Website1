@@ -54,7 +54,7 @@
 body {
   font-family: 'Playfair Display', serif;
   color: var(--text-dark);
-  background-color: var(--cream);
+  background-color: var(--white);
   line-height: 1.6;
 }
 
@@ -93,17 +93,17 @@ img {
 
 /* Custom Cursor */
 html {
-  cursor: url('/images/chess-knight-cursor.png'), auto;
+  cursor: url('../images/chess-knight-cursor.svg'), auto;
 }
 
 a, button, .clickable {
-  cursor: url('/images/chess-pawn-cursor.png'), pointer !important;
+  cursor: url('../images/chess-knight-cursor.svg'), pointer !important;
 }
 
 /* Header */
 .header {
-  background-color: var(--navy-blue);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--navy-blue);
   padding: var(--spacing-md) 0;
   position: relative;
   box-shadow: var(--shadow-md);
@@ -141,7 +141,7 @@ a, button, .clickable {
 }
 
 .nav-link {
-  color: var(--white);
+  color: var(--navy-blue);
   font-weight: 500;
   position: relative;
   padding-bottom: var(--spacing-xs);
@@ -223,7 +223,7 @@ a, button, .clickable {
   left: 0;
   right: 0;
   height: 100px;
-  background-image: url('/images/hanging-plants.png');
+  background-image: url('../images/hanging-plant.svg');
   background-repeat: repeat-x;
   background-position: center top;
   z-index: 1;
@@ -237,7 +237,7 @@ a, button, .clickable {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url('/images/hanging-plants-circle.png');
+  background-image: url('../images/hanging-plant.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
@@ -602,34 +602,18 @@ a, button, .clickable {
 }
 
 .chess-knight {
-  background-image: url('/images/chess-knight.png');
+  background-image: url('../images/chess-knight.svg');
 }
 
 .chess-pawn {
-  background-image: url('/images/chess-pawn.png');
-}
-
-.chess-rook {
-  background-image: url('/images/chess-rook.png');
-}
-
-.chess-bishop {
-  background-image: url('/images/chess-bishop.png');
-}
-
-.chess-queen {
-  background-image: url('/images/chess-queen.png');
-}
-
-.chess-king {
-  background-image: url('/images/chess-king.png');
+  background-image: url('../images/chess-pawn-cursor.svg');
 }
 
 .dice {
   position: absolute;
   width: 40px;
   height: 40px;
-  background-image: url('/images/dice.png');
+  background-image: url('../images/dice.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -641,7 +625,7 @@ a, button, .clickable {
   position: absolute;
   width: 60px;
   height: 40px;
-  background-image: url('/images/cards.png');
+  background-image: url('../images/cards.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -795,15 +779,198 @@ a, button, .clickable {
   animation: sway 5s ease-in-out infinite;
 }
 
-/* Black and White Tiled Floor Pattern */
-.tiled-floor {
-  background-image: 
-    linear-gradient(45deg, var(--black) 25%, transparent 25%),
-    linear-gradient(-45deg, var(--black) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--black) 75%),
-    linear-gradient(-45deg, transparent 75%, var(--black) 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+/* Hexagonal Tiled Floor Pattern */
+.hexagonal-floor {
+  background-color: #f5f5f5;
+  background-image: url("data:image/svg+xml,%3Csvg width='56' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23cccccc' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 28px 49px;
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
+}
+
+/* White Paneled Wall Pattern */
+.paneled-wall {
+  background-color: var(--white);
+  background-image: linear-gradient(var(--cream) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--cream) 1px, transparent 1px);
+  background-size: 100px 100px;
+  position: relative;
+}
+
+.paneled-wall::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(var(--cream) 2px, transparent 2px),
+                    linear-gradient(90deg, var(--cream) 2px, transparent 2px);
+  background-size: 25px 25px;
+  background-position: -1px -1px;
+  opacity: 0.3;
+}
+
+/* Gold Decorative Elements */
+.gold-accent {
+  color: var(--gold);
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+.gold-border {
+  border: 2px solid var(--gold);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+}
+
+.gold-frame {
+  border: 5px solid var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+/* Gallery Wall */
+.gallery-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+}
+
+.gallery-item {
+  border: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Decorative Globe */
+.gold-globe {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/gold-globe.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+/* Star Lamp */
+.gold-star {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-image: url('../images/gold-star.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+/* Vintage Record Player */
+.record-player {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 3px solid var(--gold);
+  overflow: hidden;
+}
+
+.record-player::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  background-color: var(--black);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.record-player::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5%;
+  height: 5%;
+  background-color: var(--gold);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Monopoly Poster */
+.monopoly-poster {
+  width: 100%;
+  height: 200px;
+  background-image: url('../images/monopoly-poster.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: var(--spacing-md) 0;
+}
+
+/* Reservation Tabs */
+.reservation-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.reservation-tab {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  margin: 0 var(--spacing-xs);
+  background-color: transparent;
+  border: 2px solid var(--navy-blue);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--navy-blue);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.reservation-tab:hover,
+.reservation-tab.active {
+  background-color: var(--navy-blue);
+  color: var(--white);
+}
+
+.reservation-content {
+  display: none;
+}
+
+.reservation-content.active {
+  display: block;
+}
+
+/* Form Section Styling */
+.form-section {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border: 1px solid #eee;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-section-title {
+  color: var(--navy-blue);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* Text Center Helper */
+.text-center {
+  text-align: center;
 }
